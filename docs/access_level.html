@@ -2,119 +2,212 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Elektronikon Touch � Access Level Quick Guide</title>
+    <title>Elektronikon Touch – Access Level Guide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --bg-main: #0b1220;
+            --bg-card: #111a2e;
+            --bg-accent: #162447;
+            --blue-primary: #1f6fff;
+            --blue-secondary: #4da3ff;
+            --text-main: #ffffff;
+            --text-muted: #b8c1d9;
+            --border-subtle: #223055;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.5;
-            margin: 16px;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
         }
-        h1, h2 {
-            margin-top: 24px;
+
+        header {
+            padding: 28px 32px;
+            border-bottom: 1px solid var(--border-subtle);
+            background: linear-gradient(135deg, #0b1220, #0e1a38);
         }
-        h1 {
-            font-size: 1.6em;
+
+        header h1 {
+            margin: 0;
+            font-size: 1.9em;
+            letter-spacing: 0.5px;
         }
-        h2 {
+
+        header p {
+            margin-top: 6px;
+            color: var(--text-muted);
+            max-width: 900px;
+        }
+
+        main {
+            padding: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: var(--blue-secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 6px;
+            padding: 20px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .card h2 {
+            margin-top: 0;
             font-size: 1.2em;
+            border-left: 4px solid var(--blue-primary);
+            padding-left: 10px;
         }
+
         ul, ol {
-            margin-left: 20px;
+            margin-left: 18px;
         }
-        .section {
-            border-top: 1px solid #cccccc;
-            padding-top: 16px;
-            margin-top: 16px;
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
         }
-        .note {
-            background-color: #f2f2f2;
-            padding: 10px;
-            margin-top: 10px;
+
+        strong {
+            color: var(--text-main);
         }
+
+        .steps img {
+            width: 100%;
+            margin-top: 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-subtle);
+            background-color: #000000;
+        }
+
         .validation {
-            background-color: #e8f4ff;
-            padding: 10px;
-            margin-top: 10px;
+            margin-top: 14px;
+            padding: 14px;
+            background-color: var(--bg-accent);
+            border-left: 4px solid var(--blue-secondary);
+        }
+
+        .note {
+            margin-top: 14px;
+            padding: 14px;
+            background-color: #1a223a;
+            border-left: 4px solid #ffb020;
+            color: var(--text-muted);
+        }
+
+        footer {
+            padding: 20px 32px;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.9em;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<h1>Elektronikon Touch  Access Level Quick Guide</h1>
+<header>
+    <h1>Elektronikon Touch Access Level Guide</h1>
+    <p>
+        For compressors equipped with the Elektronikon Touch controller.
+        Use during operation and fault recovery.
+    </p>
+</header>
 
-<a href="index.html">Back to Guides</a>
-<hr>
+<main>
 
-<p>
-Applies to compressors using the
-<strong>Elektronikon Touch controller</strong>.
-Use this guide during normal operation and fault recovery.
-</p>
+    <p>
+        <a href="index.html">Back to Guides</a>
+    </p>
 
-<div class="section">
-    <h2>Purpose</h2>
-    <ul>
-        <li>Enter Advanced User mode (Standby Mode )</li>
-        
-        <li>Exit safely after task completion</li>
-    </ul>
-</div>
-<div class="section">
-    <h2>Video. Entering Advanced User Mode</h2>
+    <div class="grid">
 
-    <video controls width="100%" preload="metadata">
-        <source src="assets/videos/advanced-user-mode.mov" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <div class="card">
+            <h2>Purpose</h2>
+            <ul>
+                <li>Enter Advanced User mode while in Standby</li>
+                <li>Exit the mode safely after completing tasks</li>
+            </ul>
+        </div>
 
-    
-</div>
-<div class="section">
-    <h2>Access Levels Overview</h2>
-    <ul>
-        <li>Basic. Default operator view</li>
-        <li>Advanced. Protected operational functions</li>
-        <li>Service. OEM or maintenance only</li>
-    </ul>
-</div>
+        <div class="card">
+            <h2>Access Levels</h2>
+            <ul>
+                <li><strong>Basic</strong>. Standard operator interface</li>
+                <li><strong>Advanced</strong>. Restricted operational functions</li>
+                <li><strong>Service</strong>. Manufacturer or maintenance access only</li>
+            </ul>
+        </div>
 
-<div class="section">
-    <h2>Entering Advanced User Mode</h2>
+    </div>
 
-    <ol>
-        <li>Start at the Home screen</li>
-        <li>Tap User in top corner</li>
-        <li>Select User level Advanced </li>
-        <li>Confirm the selection</li>
-    </ol>
+    <div class="card" style="margin-top:24px;">
+        <h2>Entering Advanced User Mode</h2>
 
-    <div class="validation">
-        <strong>Validation</strong>
+        <ol>
+            <li>Start on the Home screen</li>
+            <li>Select the user icon in the top right corner</li>
+            <li>Choose Advanced user level</li>
+            <li>Confirm using the checkmark</li>
+        </ol>
+
+        <div class="steps">
+            <img src="assets/photos/image1.png" alt="Advanced user symbol on home screen">
+            <img src="assets/photos/image2.jpg" alt="User icon in the top right corner">
+            <img src="assets/photos/star.png" alt="Advanced user selection icon">
+            <img src="assets/photos/check.png" alt="Confirmation checkmark">
+        </div>
+
+        <div class="validation">
+            <strong>Validation</strong>
+            <ul>
+                <li>User indicator displays Advanced with a star symbol</li>
+                <li>Additional menus appear in the interface</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:24px;">
+        <h2>Rules While in Advanced Mode</h2>
         <ul>
-            <li>User level indicator shows Advanced ( * ) </li>
-            <li>Additional menus are visible</li>
+            <li>Do not modify control parameters</li>
+            <li>Do not access Service menus</li>
+            <li>Follow approved written procedures only</li>
         </ul>
+
+        <div class="note">
+            Advanced mode grants expanded control access.
+            Incorrect changes lead to equipment trips or damage.
+        </div>
     </div>
-</div>
 
-<div class="section">
-    <h2>Rules While in Advanced Mode</h2>
-    <ul>
-        <li>Do not change control parameters</li>
-        <li>Do not access Service menus</li>
-        <li>Follow written procedures only</li>
-      
-    </ul>
+</main>
 
-    <div class="note">
-        Advanced mode provides control access. Incorrect changes cause trips or damage.
-    </div>
-</div>
-
-
+<footer>
+    Elektronikon Touch. Internal use only.
+</footer>
 
 </body>
 </html>
